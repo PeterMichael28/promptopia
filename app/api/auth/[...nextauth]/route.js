@@ -11,15 +11,15 @@ const handler = NextAuth({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
-    GithubProvider({
-        clientId: process.env.GITHUB_CLIENT_ID ,
-        clientSecret: process.env.GITHUB_CLIENT_SECRET,
-        authorization: {
-                 params: {
-                     prompt: "consent"
-                     }
-                  }
-       })
+    // GithubProvider({
+    //     clientId: process.env.GITHUB_CLIENT_ID ,
+    //     clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    //     authorization: {
+    //              params: {
+    //                  prompt: "consent"
+    //                  }
+    //               }
+    //    })
   ],
   callbacks: {
     async session({ session }) {
